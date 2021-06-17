@@ -1,27 +1,65 @@
-<!DOCTYPE HTML>
-<head>
-  <title>Ur Mawm</title>
-</head>
-<style>
-#jumpscare {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; cursor: pointer; visibility: hidden;}
-</style>
-<body>
-<input type="button" onclick="jumpscare();" value="click me"/>
-<img id="jumpscare" src="mao-zedong-unknown-compressed.jpg"/>
-<audio id="scream" src="mao zedong propaganda music Red Sun in the Sky (1).mp3"/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Sender</title>
+  </head>
 
+  <style>
+    .button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button1 {background-color: #4CAF50;} /* Green */
+    .button2 {background-color: #008CBA;} /* Blue */
+    </style>
+  
+  <body>
+    <button class="button button1" onclick="sendMessage()">Check Phone</button>
+    <button class="button button2" onclick="sendMessage2()">Come Up</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/855174625766932520/Q7yOivD32eirNHVXzc4Jr1OeHJ2UnraBM-gm5r76aplxlNyiUhN198qz2dUX_F3fcGST");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Message From Parents",
+        avatar_url: "",
+        content: "Check Phone"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
 
 <script>
-function jumpscare() {
-var jumpscare = document.getElementById("jumpscare");
-jumpscare.style.visibility="visible";
-var audio = document.getElementById("scream");
-  audio.play();
-  
-}
-</script>
+    function sendMessage2() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/855174625766932520/Q7yOivD32eirNHVXzc4Jr1OeHJ2UnraBM-gm5r76aplxlNyiUhN198qz2dUX_F3fcGST");
 
+      request.setRequestHeader('Content-type', 'application/json');
 
-</body>
+      var params = {
+        username: "Message From Parents",
+        avatar_url: "",
+        content: "Come Up"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
 
 </html>
