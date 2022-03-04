@@ -1,65 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Webhook Sender</title>
+    <meta charset="utf-8">
+    <title>Burgers Website!</title>
   </head>
-
-  <style>
-    .button {
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-    
-    .button1 {background-color: #4CAF50;} /* Green */
-    .button2 {background-color: #008CBA;} /* Blue */
-    </style>
-  
   <body>
-    <button class="button button1" onclick="sendMessage()">Check Phone</button>
-    <button class="button button2" onclick="sendMessage2()">Come Up</button>
+    <body style="background-color:rgb(255, 0, 0);"></body>
+    <h1>Welcome to burger's 
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="355 20 453 89.30769">
+            <defs>
+              <linearGradient id="Magenta_Green_Yellow" data-name="Magenta, Green, Yellow" x1="355" y1="66.15385" x2="453" y2="66.15385" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#e02081"/>
+                <stop offset="0.0227" stop-color="#d62e7b"/>
+                <stop offset="0.0634" stop-color="#c84173"/>
+                <stop offset="0.10533" stop-color="#c04c6e"/>
+                <stop offset="0.15" stop-color="#bd506c"/>
+                <stop offset="0.3" stop-color="#ea895f"/>
+                <stop offset="0.47" stop-color="#a32175"/>
+                <stop offset="0.64045" stop-color="#f8d429"/>
+                <stop offset="0.79" stop-color="#009c4c"/>
+                <stop offset="1" stop-color="#e02181"/>
+              </linearGradient>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+              <ellipse cx="404" cy="66.15385" rx="49" ry="23.15385" style="fill: url(#Magenta_Green_Yellow)"/>
+            </g>
+            <g id="Layer_1" data-name="Layer 1">
+              <text transform="translate(371.5127 70.64111)" style="font-size: 14.35897445678711px;font-family: BrushScriptMT, Brush Script MT">AWESOME</text>
+              <text x="-216" y="-173"/>  </g>
+          </svg> WEBSITE!!!</h1>
+    <img src="squimpcat.jpg" alt="squimpcat">
+    <p><a href="https://www.youtube.com/watch?v=KmtzQCSh6xk">Click here to see my favorite video from youtube.com!</a</p>
+
+        
+          
+          
+
   </body>
-
-  <script>
-    function sendMessage() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/855174625766932520/Q7yOivD32eirNHVXzc4Jr1OeHJ2UnraBM-gm5r76aplxlNyiUhN198qz2dUX_F3fcGST");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Message From Parents",
-        avatar_url: "",
-        content: "Check Phone"
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
-
-<script>
-    function sendMessage2() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/855174625766932520/Q7yOivD32eirNHVXzc4Jr1OeHJ2UnraBM-gm5r76aplxlNyiUhN198qz2dUX_F3fcGST");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Message From Parents",
-        avatar_url: "",
-        content: "Come Up"
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
-
 </html>
